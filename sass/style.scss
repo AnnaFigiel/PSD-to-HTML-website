@@ -35,10 +35,14 @@ header {
         float: left;
         
     }
+    
+    #home {
+        height: 25px;
+    }
         
     #fb, #tw { 
         float: right;
-        padding: 5px 15px;
+        padding: 5px 8px;
         &:hover {
             
         }
@@ -207,7 +211,7 @@ header {
 
 section#baner {
        
-    background-image: url(../images/baner.png);
+    background-image: url(../images/baner_warszawa.jpg);
     background-attachment: fixed; 
     background-repeat: no-repeat;
     height: 580px;
@@ -257,9 +261,17 @@ section#baner {
     
         h1 {
             overflow: hidden; 
-            width: 600px;
             text-align: center;
-    }
+        }
+    
+//        #motto {
+//
+//            &::before {
+//                content: "{";
+//                font-size: 100px;
+//            }
+//        }
+    
 //        #motto-1 {
 //            animation: type 1s steps(80, end); 
 //        }
@@ -299,7 +311,10 @@ section#our_projects {
     
     height: 560px;
     padding: 25px;
-  
+    
+    .container {
+        position: relative;
+    
     h1 {
         font-size: 36px;
         padding: 25px 5px;
@@ -322,24 +337,44 @@ section#our_projects {
     p {
         font-size: 16px;
     }
-      
+    
+    #prev, #next {
+        position: absolute;
+        top: 290px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #prev {
+        left: 5px;
+    }
+        
+    #next {
+        right: 5px;
+    }    
+    }  
     .slider {     
         height: 380px;
-        display: flex;
-        align-items: center;
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+
         ul {
-            overflow: hidden;
+            position: relative;
             list-style: none;
             padding: 10px;
             display: flex;
-            align-items: center;
+            //align-items: flex-start;
             li {
                 display: inline-block;
                 padding: 10px;
                 .name {
-                    color: $custom-color;
+                    color: $dark-color;
                     font-weight: 600;
                     padding: 5px 0;
+                }
+                .img {
+                    max-width: 357px;
                 }
                 .range {
                     color: $custom-color;
@@ -353,12 +388,6 @@ section#our_projects {
                 }
             }
         }
-        #prev, #next {
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        
     }
     @media (max-width: $phone-max) {
             height: 650px;
