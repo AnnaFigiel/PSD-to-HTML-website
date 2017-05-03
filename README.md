@@ -2,7 +2,7 @@
 
 **My website from PSD to HTML**
 
-https://annafigiel.github.io/PSD-to-HTML-website/
+Link: https://annafigiel.github.io/PSD-to-HTML-website/
 
 **Graphic design project:** 
 
